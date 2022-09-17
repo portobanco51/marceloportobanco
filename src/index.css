@@ -33,12 +33,13 @@ body {
     display: flex;
     position: absolute;
     gap: 3rem;
-    right: 5px;
+    right: 0;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     max-width: 1.5rem;
     min-height: 70vh;
-    margin-inline: auto;
+    margin-inline: 1rem;
+    margin-block: auto;
 }
 
 .navbar-item {
@@ -74,4 +75,8 @@ body {
     max-width: 80vw;
     height: 30vh;
     margin-inline: auto;
+}
+
+.right-exp {
+    text-align: right;
 }
