@@ -1,6 +1,7 @@
 * {
     --font-primary: Syne;
     --font-secondary: "B612 Mono", monospace;
+    --color-green: #d8fd38;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,7 +14,7 @@ body {
     background-repeat: no-repeat;
     background-color: #e0fffb;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 97vh;
     font-family: var(--font-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,4 +23,55 @@ body {
 .span-header {
     font-family: syne;
     font-weight: 400;
+}
+
+.span-green {
+    color: var(--color-green);
+}
+
+.navbar {
+    display: flex;
+    position: absolute;
+    gap: 3rem;
+    right: 5px;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    max-width: 1.5rem;
+    min-height: 70vh;
+    margin-inline: auto;
+}
+
+.navbar-item {
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+
+.banner-img {
+    max-width: clamp(400px, 40vh, 800px);
+}
+
+.experience {
+    display: block;
+    margin-inline: auto;
+    gap: 2rem;
+    max-width: 80vw;
+    min-height: 30vh;
+}
+
+.exp-shadow {
+    text-shadow: 0 0 2rem rgb(255, 255, 255, 0.5);
+}
+
+.chart {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-evenly;
+    background-image: url(./assets/icons/newLines.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 80vw;
+    height: 30vh;
+    margin-inline: auto;
 }
