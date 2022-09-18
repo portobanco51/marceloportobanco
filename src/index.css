@@ -2,6 +2,7 @@
     --font-primary: Syne;
     --font-secondary: "B612 Mono", monospace;
     --color-green: #d8fd38;
+    --color-base: #2d2e32;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body {
     background-image: url(./assets/images/bgport.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #e0fffb;
+    background-color: var(--color-base);
     background-size: cover;
     min-height: 97vh;
     font-family: var(--font-primary);
@@ -21,7 +22,7 @@ body {
 }
 
 .span-header {
-    font-family: syne;
+    font-family: var(--font-primary);
     font-weight: 400;
 }
 
@@ -53,15 +54,34 @@ body {
 }
 
 .experience {
-    display: block;
     margin-inline: auto;
     gap: 2rem;
     max-width: 80vw;
     min-height: 30vh;
 }
 
-.exp-shadow {
-    text-shadow: 0 0 2rem rgb(255, 255, 255, 0.5);
+.exp-shadow::after {
+    content: "EXPERIENCE";
+    color: #ffffff15;
+    position: absolute;
+    margin-left: -345px;
+    margin-top: -15px;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    font-family: var(--font-primary);
+    font-weight: 800;
+}
+
+.skill-shadow::after {
+    content: "SKILLS";
+    color: #ffffff15;
+    position: absolute;
+    margin-left: -230px;
+    margin-top: -25px;
+    font-size: 4rem;
+    letter-spacing: 10px;
+    font-family: var(--font-primary);
+    font-weight: 800;
 }
 
 .chart {
@@ -79,4 +99,34 @@ body {
 
 .right-exp {
     text-align: right;
+}
+
+.card-img {
+    max-width: 7rem;
+    margin-inline: auto;
+}
+
+.skills-bar {
+    max-width: 90vw;
+    margin-inline: auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 6.5rem;
+}
+.skills-bar::-webkit-scrollbar {
+    width: 0;
+}
+
+.skill-card {
+    box-shadow: 0px 10px 20px 0px #00000080;
+    scroll-margin-inline: 1rem;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    min-height: 13rem;
+    min-width: 13rem;
+    border-radius: 1.8rem;
+    margin-block: 3rem;
 }
