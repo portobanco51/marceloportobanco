@@ -1,4 +1,7 @@
 import { Box, Typography } from '@mui/material'
+import { Player } from '@lottiefiles/react-lottie-player'
+import ExperienceCard from './ExperienceCard'
+import ExperienceCardRight from './ExperienceCardRight'
 
 const Experience = () => {
     return (
@@ -8,34 +11,18 @@ const Experience = () => {
             </Box>
 
             <Box className='chart' my='5rem'>
-
-                <Box display='flex' flexDirection='row' width='10vw' gap='24vw' sx={{ justifyContent: { xs: 'space-around', sm: 'space-around', md: 'space-around' } }} justifyContent='space-around'>
-
-                    <Box display='flex' flexDirection='column' className='right-exp'>
-                        <Typography mx='0.8rem' >Title</Typography>
-                        <Typography mx='0.8rem' >Time</Typography>
-                        <Typography mx='0.8rem' >Descrp</Typography>
-                    </Box>
-
-                    <Box display='flex' flexDirection='column'>
-                        <Typography mx='0.8rem'>Title</Typography>
-                        <Typography mx='0.8rem'>Time</Typography>
-                        <Typography mx='0.8rem'>Descrp</Typography>
-                    </Box>
+                <Box position='absolute'>
+                    <Player renderer='svg' className='rocket' autoplay loop src="https://assets2.lottiefiles.com/packages/lf20_ZUd5j6.json" />
                 </Box>
 
-                <Box display='flex' flexDirection='row' width='10vw' justifyContent='center' sx={{ gap: { xs: '15vw', sm: '25vw', md: '32vw' } }} >
+                <Box display='flex' flexDirection='row' sx={{ justifyContent: { xs: 'space-around', sm: 'space-around', md: 'space-around' }, gap: { xs: '6rem', sm: '10rem', md: '14rem' } }}>
+                    <ExperienceCardRight title={'Amazon'} time={2020} position={'Transportation Analyst'} />
+                    <ExperienceCard title={'Experian'} time={2021} position={'Technical Support Rep'} />
+                </Box>
 
-                    <Box display='flex' flexDirection='column' >
-                        <Typography mx='0.8rem' >Title</Typography>
-                        <Typography mx='0.8rem' >Time</Typography>
-                        <Typography mx='0.8rem' >Descrp</Typography>
-                    </Box>
-                    <Box display='flex' flexDirection='column' className='right-exp'>
-                        <Typography mx='0.8rem' >Title</Typography>
-                        <Typography mx='0.8rem' >Time</Typography>
-                        <Typography mx='0.8rem' >Descrp</Typography>
-                    </Box>
+                <Box display='flex' flexDirection='row' justifyContent='center' sx={{ gap: { xs: '0', sm: '8vw', md: '17vw' } }} >
+                    <ExperienceCard title={'Amazon'} time={2019} position={'Technical Support'} />
+                    <ExperienceCardRight title={'IBM'} time={2022} position={'Executive Assistant'} />
                 </Box>
 
             </Box>

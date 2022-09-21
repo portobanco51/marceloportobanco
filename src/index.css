@@ -67,6 +67,15 @@ body {
     min-height: 30vh;
 }
 
+.rocket {
+    max-width: 280px;
+    position: relative;
+    rotate: 65deg;
+    z-index: -99;
+    mix-blend-mode: hard-light;
+    opacity: 0.2;
+}
+
 .skill-shadow::after {
     content: "SKILLS";
     color: #ffffff15;
@@ -111,9 +120,10 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 80vw;
-    gap: 10vw;
+    gap: 2rem;
+    min-height: 280px;
     margin-inline: auto;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -174,6 +184,7 @@ body {
     background-blend-mode: multiply;
     transition: all 0.4s ease-in-out;
     align-items: center;
+    box-shadow: 0px 10px 20px 0px #00000080;
 }
 
 .project-card:hover,
