@@ -25,6 +25,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.loader {
+    max-width: 300px;
+    mix-blend-mode: hard-light;
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.loading {
+    max-width: 300px;
+    cursor: wait;
+}
+
+.title {
+    cursor: pointer;
+}
+
 .span-header {
     font-family: var(--font-primary);
     font-weight: 400;
@@ -62,9 +78,11 @@ body {
 
 .experience {
     margin-inline: auto;
-    gap: 2rem;
-    max-width: 80vw;
-    min-height: 30vh;
+    max-width: 90vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
 }
 
 .rocket {
@@ -119,11 +137,11 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    max-width: 80vw;
-    gap: 2rem;
-    min-height: 280px;
+    min-width: 90vw;
+    gap: 15vh;
     margin-inline: auto;
-    justify-content: space-around;
+    min-height: 280px;
+    justify-content: center;
     align-items: center;
 }
 

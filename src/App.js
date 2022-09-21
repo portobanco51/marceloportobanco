@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { fetchData, options } from './utils/projectsData';
 import { projects } from './utils/projectsUrls';
+import { Box } from '@mui/material'
+import LoadingScreen from './components/LoadingScreen';
 import Experience from './components/Experience';
 import Header from './components/Header'
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Title from './components/Title';
 
 function App() {
 
@@ -23,12 +26,23 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <Header />
-      <Skills />
-      <Projects projectsData={projectsMeta} />
-      <Experience />
-    </div>
+    <>
+
+      {
+        projectsMeta.length >= 5 ?
+          <Box className='fade' >
+            <Header />
+            <Skills />
+            <Projects projectsData={projectsMeta} />
+            <Experience />
+            <Title />
+          </Box>
+          :
+          <Box>
+            <LoadingScreen />
+          </Box>
+      }
+    </>
   );
 }
 
