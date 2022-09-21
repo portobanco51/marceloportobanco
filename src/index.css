@@ -4,8 +4,12 @@
     --color-green: #d8fd38;
     --color-base: #2d2e32;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -24,6 +28,7 @@ body {
 .span-header {
     font-family: var(--font-primary);
     font-weight: 400;
+    filter: drop-shadow();
 }
 
 .span-green {
@@ -35,6 +40,7 @@ body {
     position: absolute;
     gap: 3rem;
     right: 0;
+    top: 90px;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     max-width: 1.5rem;
@@ -47,6 +53,7 @@ body {
     text-transform: uppercase;
     writing-mode: vertical-rl;
     text-orientation: sideways;
+    transform: rotateZ(180deg);
 }
 
 .banner-img {
@@ -58,6 +65,30 @@ body {
     gap: 2rem;
     max-width: 80vw;
     min-height: 30vh;
+}
+
+.skill-shadow::after {
+    content: "SKILLS";
+    color: #ffffff15;
+    position: absolute;
+    margin-left: -205px;
+    margin-top: -15px;
+    font-size: 3.2rem;
+    letter-spacing: 10px;
+    font-family: var(--font-primary);
+    font-weight: 800;
+}
+
+.projects-shadow::after {
+    content: "PROJECTS";
+    color: #ffffff15;
+    position: absolute;
+    margin-left: -320px;
+    margin-top: -15px;
+    font-size: 3.2rem;
+    letter-spacing: 10.5px;
+    font-family: var(--font-primary);
+    font-weight: 800;
 }
 
 .exp-shadow::after {
@@ -72,50 +103,52 @@ body {
     font-weight: 800;
 }
 
-.skill-shadow::after {
-    content: "SKILLS";
-    color: #ffffff15;
-    position: absolute;
-    margin-left: -230px;
-    margin-top: -25px;
-    font-size: 4rem;
-    letter-spacing: 10px;
-    font-family: var(--font-primary);
-    font-weight: 800;
-}
-
 .chart {
     display: flex;
-    gap: 4rem;
-    justify-content: space-evenly;
-    background-image: url(./assets/icons/newLines.svg);
+    flex-flow: column nowrap;
+    background-image: url(./assets/icons/chart.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 80vw;
-    height: 30vh;
+    gap: 10vw;
     margin-inline: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .right-exp {
     text-align: right;
 }
+.left-exp {
+    text-align: left;
+}
 
 .card-img {
     max-width: 7rem;
+    min-width: 7rem;
+    min-height: 7rem;
     margin-inline: auto;
 }
 
 .skills-bar {
-    max-width: 90vw;
+    max-width: 100%;
     margin-inline: auto;
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 6.5rem;
+    flex-direction: row;
+    overflow-x: hidden;
 }
-.skills-bar::-webkit-scrollbar {
-    width: 0;
+
+.skills-container {
+    display: flex;
+    animation: scroll 30s linear 0s infinite;
+}
+
+.skills-slider {
+    margin-left: 5.5rem;
+    display: flex;
+    gap: 5.5rem;
+    max-width: 100%;
 }
 
 .skill-card {
@@ -129,4 +162,41 @@ body {
     min-width: 13rem;
     border-radius: 1.8rem;
     margin-block: 3rem;
+}
+
+.project-card {
+    border: 1px solid #d8fd3890;
+    border-radius: 30px;
+    display: flex;
+    background-position: center;
+    background-color: #303030;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: all 0.4s ease-in-out;
+    align-items: center;
+}
+
+.project-card:hover,
+.project-card:focus > * {
+    background-color: rgba(112, 112, 112, 0.9);
+    color: transparent;
+    scale: 1.05;
+}
+
+.card-text {
+    color: #fff;
+    justify-content: space-between;
+}
+
+span {
+    color: #d8fd38;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }

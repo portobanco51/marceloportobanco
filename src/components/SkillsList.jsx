@@ -6,9 +6,18 @@ import SkillCard from './SkillCard'
 const SkillsList = () => {
     return (
         <Box className='skills-bar' >
-            {skills.map((el, i) => (
-                <SkillCard key={i} name={el.name} />
-            ))}
+            <Box className='skills-container'>
+                <Box className='skills-slider'>
+                    {skills.map((el, i) => (
+                        <SkillCard key={i} name={el.name} />
+                    ))}
+                </Box>
+                <Box className='skills-slider'>
+                    {skills.map((el, i) => (
+                        <SkillCard key={i} name={el.name} />
+                    ))}
+                </Box>
+            </Box>
         </Box>
     )
 }
