@@ -12,7 +12,7 @@ const Experience = () => {
 
             <Box className='chart' my='5rem'>
                 <Box position='absolute'>
-                    <Player renderer='svg' className='rocket' autoplay loop src="https://assets2.lottiefiles.com/packages/lf20_ZUd5j6.json" />
+                    <Player renderer='svg' className='rocket' autoplay loop src="https://lottie.host/f37cc593-b9e7-4a1c-95de-627eae306f6c/zuJxm3L84U.json" />
                 </Box>
 
                 <Box display='flex' flexDirection='row' sx={{ justifyContent: { xs: 'space-around', sm: 'space-around', md: 'space-around' }, gap: { xs: '6rem', sm: '10rem', md: '14rem' } }}>

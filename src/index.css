@@ -68,7 +68,7 @@ body {
 }
 
 .rocket {
-    max-width: 280px;
+    max-width: 300px;
     position: relative;
     rotate: 65deg;
     z-index: -99;
