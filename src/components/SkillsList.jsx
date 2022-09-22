@@ -9,12 +9,12 @@ const SkillsList = () => {
             <Box className='skills-container'>
                 <Box className='skills-slider'>
                     {skills.map((el, i) => (
-                        <SkillCard key={i} name={el.name} />
+                        <SkillCard key={i} name={el.name} logo={el.logo} />
                     ))}
                 </Box>
                 <Box className='skills-slider'>
                     {skills.map((el, i) => (
-                        <SkillCard key={i} name={el.name} />
+                        <SkillCard key={i} name={el.name} logo={el.logo} />
                     ))}
                 </Box>
             </Box>
