@@ -1,9 +1,11 @@
 import { Box } from '@mui/material'
-import Title from '../components/Title';
+import Title from './Title';
+import Links from './Links';
 
 const Footer = () => {
     return (
-        <Box position='a' bottom='0px' >
+        <Box display='flex' justifyContent='space-between' sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
+            <Links />
             <Title />
         </Box>
     )

@@ -33,6 +33,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 1.5rem;
 }
 
 .loader {
@@ -83,6 +84,7 @@ a {
     writing-mode: vertical-rl;
     text-orientation: sideways;
     transform: rotateZ(180deg);
+    filter: drop-shadow(0px 0px 10px #000000);
 }
 
 .banner-img {
@@ -95,6 +97,13 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.contact-img {
+    pointer-events: none;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+    left: -100px;
 }
 
 .experience {
@@ -287,6 +296,57 @@ a {
 
 span {
     color: #d8fd38;
+}
+
+.form-label {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    outline: none;
+    min-height: 2rem;
+    resize: none;
+}
+
+.link-item {
+    opacity: 0.6;
+    transition: all 0.4s cubic-bezier(0.54, 1.73, 0.85, 0.81);
+}
+
+.link-item:hover,
+.link-item:focus {
+    opacity: 1;
+}
+
+.form-label::placeholder {
+    font-family: var(--font-secondary);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.contact-info {
+    background-color: rgba(121, 122, 128, 0.25);
+    backdrop-filter: blur(10px);
+    flex-grow: 1;
+    box-shadow: 0 0px 25px #00000070;
+}
+
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+}
+
+.submit {
+    font-family: var(--font-primary);
+    font-size: 14px;
+    background-color: transparent;
+    color: var(--color-green);
+    cursor: pointer;
+    max-width: fit-content;
+    margin-inline: auto;
+    border: none;
 }
 
 @keyframes scroll {

@@ -3,10 +3,10 @@ import Resume from '../assets/Resume.pdf';
 
 const Links = () => {
     return (
-        <Box display='flex' gap='2rem' my='1.5rem' sx={{ justifyContent: { xs: 'center', sm: 'left' }, ml: { sm: '2rem' } }} >
-            <Link fontSize='1rem' fontFamily='Syne' fontWeight='400' underline='none' color='rgb(255,255,255, 0.6)' href='https://www.linkedin.com/in/jonathan-portobanco/' target='_blank' rel='noopener noreferrer' >LinkedIn</Link>
-            <Link fontSize='1rem' fontFamily='Syne' fontWeight='400' underline='none' color='rgb(255,255,255, 0.6)' href='https://github.com/portobanco51' target='_blank' rel='noopener noreferrer' >GitHub</Link>
-            <Link fontSize='1rem' fontFamily='Syne' fontWeight='400' underline='none' color='rgb(255,255,255, 0.6)' href={Resume} download={`Marcelo's_Resume.pdf`}>Resume</Link>
+        <Box display='flex' alignItems='center' gap='2rem' sx={{ justifyContent: { xs: 'center', sm: 'left' }, ml: { sm: '2rem' } }} >
+            <Link className='link-item' fontSize='1rem' fontFamily='Syne' fontWeight='400' underline='none' color='rgb(255,255,255)' href='https://www.linkedin.com/in/jonathan-portobanco/' target='_blank' rel='noopener noreferrer' >LinkedIn</Link>
+            <Link className='link-item' fontSize='1rem' fontFamily='Syne' fontWeight='400' underline='none' color='rgb(255,255,255)' href='https://github.com/portobanco51' target='_blank' rel='noopener noreferrer' >GitHub</Link>
+            <Link className='link-item' fontSize='1rem' fontFamily='Syne' fontWeight='400' underline='none' color='rgb(255,255,255)' href={Resume} download={`Marcelo's_Resume.pdf`}>Resume</Link>
         </Box>
     )
 }
