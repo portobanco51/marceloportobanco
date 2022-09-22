@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import { Link as Smooth } from 'react-scroll';
 import { Player } from '@lottiefiles/react-lottie-player'
 import Navbar from './Navbar';
 const Banner = () => {
@@ -11,6 +12,14 @@ const Banner = () => {
                     <Typography letterSpacing='2px' my='0.5rem' mx='0' fontFamily='Syne' fontWeight='700' fontSize='24px' variant='h2' >Front<span className='span-green' >-</span>end Developer<span className='span-green' >.</span> </Typography>
 
                     <Typography sx={{ textAlign: { xs: 'center', sm: 'left' }, mx: { xs: 'auto', sm: '0' } }} my='0.5rem' maxWidth='300px' fontSize='14px' fontWeight='400' fontFamily='B612 Mono' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ad voluptates odio aperiam officiis perspiciatis alias consectetur eius perferendis sapiente debitis, quia quaerat, magnam voluptas architecto! Ea qui optio ut.</Typography>
+
+                    <Smooth to="projects" spy={true} smooth={true} offset={0} duration={300}>
+                        <Typography fontFamily='Syne' fontWeight='400' fontSize='14px'>
+                            Projects
+                            <span>  -&gt;</span>
+                        </Typography>
+                    </Smooth>
+
                 </Box>
                 <Box>
                     <Player renderer='svg' className='banner-img' autoplay loop src="https://assets6.lottiefiles.com/packages/lf20_kw2yp643.json" />

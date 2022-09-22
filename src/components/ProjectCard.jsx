@@ -2,7 +2,7 @@ import { Box, Typography, Link } from '@mui/material';
 
 
 const ProjectCard = ({ data }) => {
-    const { title, url, description, img } = data
+    const { title, url, description, img, git } = data
 
     return (
         <Box maxWidth='200px' minWidth='8vw' maxHeight='1rem' minHeight='18rem' className='project-card' style={{ backgroundImage: `url(${img})` }} >
@@ -11,6 +11,7 @@ const ProjectCard = ({ data }) => {
                     <Typography alignItems='center' display='flex' maxWidth='80%' mx='auto' textAlign='center' fontSize='20px' fontFamily='Syne' fontWeight='400' >{title}</Typography>
                     <Typography maxWidth='80%' mx='auto' textAlign='center' fontSize='12px' fontFamily='B612 Mono' fontWeight='400' >{description}</Typography>
                 </Box>
+                {console.log(git)}
             </Link>
         </Box >
     )

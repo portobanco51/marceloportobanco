@@ -17,9 +17,11 @@ function App() {
     const projectsData = () => {
       setProjectsMeta([]);
       const openGraphUrl = 'https://og-link-preview.p.rapidapi.com/?url=';
+      const githubUrl = 'https://github.com/portobanco51/';
       projects.forEach(async (e) => {
         const data = await fetchData(`${openGraphUrl}${e}`, options);
-        setProjectsMeta((prev) => [...prev, { title: data.title, url: data.domain, img: [data.cover || data.favicon], description: data.description }])
+        const repoUrl = data.title.toLowerCase();
+        setProjectsMeta((prev) => [...prev, { title: data.title, url: data.domain, img: [data.cover || data.favicon], description: data.description, git: `${githubUrl}${repoUrl.replace(/\s+/g, '')}` }])
       })
     }
     projectsData()
@@ -27,9 +29,8 @@ function App() {
 
   return (
     <>
-
       {
-        projectsMeta.length >= 5 ?
+        projectsMeta.length >= 4 ?
           <Box className='fade' >
             <Header />
             <Skills />
@@ -38,12 +39,17 @@ function App() {
             <Title />
           </Box>
           :
-          <Box>
+          <Box className='header'>
             <LoadingScreen />
           </Box>
       }
     </>
   );
 }
+
+// FINISH CONTACT ME COMPONENT {HOW TO SEND EMAILS FROM FORM}
+// INSTALL FRAMER MOTION
+// SWITCH IMG EXPORT ON SKILLSLIST
+// OPTIMIZE CSS
 
 export default App

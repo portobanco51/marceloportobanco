@@ -14,15 +14,25 @@ html::-webkit-scrollbar {
 
 body {
     color: #fff;
-    background-image: url(./assets/images/bgport.png);
-    background-position: center;
-    background-repeat: no-repeat;
     background-color: var(--color-base);
-    background-size: cover;
-    min-height: 97vh;
     font-family: var(--font-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.fade {
+    min-width: 100vw;
+    margin-inline: auto;
+    overflow-x: hidden;
+}
+
+.header {
+    background-image: url(./assets/images/bgport2.png);
+    background-color: var(--color-base);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .loader {
@@ -37,14 +47,13 @@ body {
     cursor: wait;
 }
 
-.title {
+a {
     cursor: pointer;
 }
 
 .span-header {
     font-family: var(--font-primary);
     font-weight: 400;
-    filter: drop-shadow();
 }
 
 .span-green {
@@ -52,11 +61,13 @@ body {
 }
 
 .navbar {
+    opacity: 0.9;
     display: flex;
     position: absolute;
+    z-index: 1000;
     gap: 3rem;
     right: 0;
-    top: 90px;
+    top: 16vh;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     max-width: 1.5rem;
@@ -66,6 +77,8 @@ body {
 }
 
 .navbar-item {
+    cursor: pointer;
+    color: var(--color-green);
     text-transform: uppercase;
     writing-mode: vertical-rl;
     text-orientation: sideways;
@@ -86,7 +99,7 @@ body {
 }
 
 .rocket {
-    max-width: 300px;
+    max-width: clamp(150px, 50vw, 280px);
     position: relative;
     rotate: 65deg;
     z-index: -99;
@@ -104,6 +117,8 @@ body {
     letter-spacing: 10px;
     font-family: var(--font-primary);
     font-weight: 800;
+    overflow-x: hidden;
+    max-width: -webkit-fill-available;
 }
 
 .projects-shadow::after {
@@ -116,6 +131,8 @@ body {
     letter-spacing: 10.5px;
     font-family: var(--font-primary);
     font-weight: 800;
+    overflow-x: hidden;
+    max-width: -webkit-fill-available;
 }
 
 .exp-shadow::after {
@@ -128,6 +145,8 @@ body {
     letter-spacing: 1px;
     font-family: var(--font-primary);
     font-weight: 800;
+    overflow-x: hidden;
+    max-width: -webkit-fill-available;
 }
 
 .chart {
@@ -135,13 +154,14 @@ body {
     flex-flow: column nowrap;
     background-image: url(./assets/icons/chart.svg);
     background-position: center;
+    padding-block-end: 1rem;
     background-size: contain;
     background-repeat: no-repeat;
     min-width: 90vw;
-    gap: 15vh;
+    gap: 10vh;
     margin-inline: auto;
-    min-height: 280px;
-    justify-content: center;
+    min-height: 270px;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -157,6 +177,7 @@ body {
     min-width: 7rem;
     min-height: 7rem;
     margin-inline: auto;
+    filter: drop-shadow(0px 0px 10px #00000090);
 }
 
 .skills-bar {
@@ -202,7 +223,7 @@ body {
     background-blend-mode: multiply;
     transition: all 0.4s ease-in-out;
     align-items: center;
-    box-shadow: 0px 10px 20px 0px #00000080;
+    box-shadow: 0px 10px 20px 0px #00000060;
 }
 
 .project-card:hover,
