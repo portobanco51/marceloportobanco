@@ -7,7 +7,7 @@ import Experience from './components/Experience';
 import Header from './components/Header'
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Title from './components/Title';
+import ContactMe from './components/ContactMe';
 
 function App() {
 
@@ -34,9 +34,11 @@ function App() {
           <Box className='fade' >
             <Header />
             <Skills />
-            <Projects projectsData={projectsMeta} />
-            <Experience />
-            <Title />
+            <Box className='exp-banner' >
+              <Projects projectsData={projectsMeta} />
+              <Experience />
+            </Box>
+            <ContactMe />
           </Box>
           :
           <Box className='header'>

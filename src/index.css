@@ -89,6 +89,14 @@ a {
     max-width: clamp(400px, 40vh, 800px);
 }
 
+.exp-banner {
+    background-image: url(./assets/images/expbg.svg);
+    background-color: var(--color-base);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .experience {
     margin-inline: auto;
     max-width: 90vw;
@@ -111,10 +119,10 @@ a {
     content: "SKILLS";
     color: #ffffff15;
     position: absolute;
-    margin-left: -205px;
-    margin-top: -15px;
-    font-size: 3.2rem;
-    letter-spacing: 10px;
+    margin-left: -240px;
+    margin-top: -22px;
+    font-size: 3.7rem;
+    letter-spacing: 18px;
     font-family: var(--font-primary);
     font-weight: 800;
     overflow-x: hidden;
@@ -125,10 +133,23 @@ a {
     content: "PROJECTS";
     color: #ffffff15;
     position: absolute;
-    margin-left: -320px;
-    margin-top: -15px;
-    font-size: 3.2rem;
-    letter-spacing: 10.5px;
+    margin-left: -375px;
+    margin-top: -22px;
+    font-size: 3.7rem;
+    letter-spacing: 18px;
+    font-family: var(--font-primary);
+    font-weight: 800;
+    overflow-x: hidden;
+    max-width: -webkit-fill-available;
+}
+.contact-shadow::after {
+    content: "CONTACTME";
+    color: #ffffff15;
+    position: absolute;
+    margin-left: -447px;
+    margin-top: -22px;
+    font-size: 3.7rem;
+    letter-spacing: 18px;
     font-family: var(--font-primary);
     font-weight: 800;
     overflow-x: hidden;
@@ -139,10 +160,10 @@ a {
     content: "EXPERIENCE";
     color: #ffffff15;
     position: absolute;
-    margin-left: -345px;
-    margin-top: -15px;
-    font-size: 3.2rem;
-    letter-spacing: 1px;
+    margin-left: -445px;
+    margin-top: -22px;
+    font-size: 3.7rem;
+    letter-spacing: 18px;
     font-family: var(--font-primary);
     font-weight: 800;
     overflow-x: hidden;
@@ -215,27 +236,52 @@ a {
 
 .project-card {
     border: 1px solid #d8fd3890;
+    flex-flow: column nowrap;
     border-radius: 30px;
     display: flex;
+    position: relative;
     background-position: center;
     background-color: #303030;
     background-size: cover;
     background-blend-mode: multiply;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.54, 1.73, 0.85, 0.81);
     align-items: center;
     box-shadow: 0px 10px 20px 0px #00000060;
+}
+
+.git-icon {
+    color: #ffffff90;
+    position: absolute;
+    z-index: 1000;
+    min-width: 2.15rem;
+    min-height: 2.15rem;
+    border-radius: 50%;
+    background-color: #000;
+    right: 40%;
+    bottom: -18px;
+    box-shadow: 0px 10px 20px 0px #00000060;
+    transition: all 0.4s cubic-bezier(0.54, 1.73, 0.85, 0.81);
+}
+
+.git-icon:hover,
+.git-icon:focus {
+    color: var(--color-green);
+    scale: 1.1;
 }
 
 .project-card:hover,
 .project-card:focus > * {
     background-color: rgba(112, 112, 112, 0.9);
     color: transparent;
-    scale: 1.05;
+    translate: 0 -10px;
+    scale: 1.02;
+    z-index: 9999;
 }
 
 .card-text {
     color: #fff;
     justify-content: space-between;
+    border-radius: 30px;
 }
 
 span {
