@@ -5,7 +5,7 @@ import Title from './Title';
 
 const Header = () => {
     return (
-        <Box id='/' className='header' position='relative' display='flex' flexDirection='column' minHeight='100vh'>
+        <Box id='/' className='header' position='relative' display='flex' flexDirection='column' minHeight='100vh' >
             <Title />
             <Banner />
             <Links />

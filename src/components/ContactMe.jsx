@@ -1,55 +1,56 @@
 import { useRef } from 'react';
 import { Box, Typography } from '@mui/material'
 import { Player } from '@lottiefiles/react-lottie-player'
-import withReactContent from 'sweetalert2-react-content'
-import Swal from 'sweetalert2'
-import emailjs from '@emailjs/browser'
+// import withReactContent from 'sweetalert2-react-content'
+// import Swal from 'sweetalert2'
+// import emailjs from '@emailjs/browser'
 import Footer from './Footer';
+import Img from '../assets/images/bannercta.json';
+import { sendEmail } from '../utils/email'
 
-const MySwal = withReactContent(Swal)
+// const MySwal = withReactContent(Swal)
 
 const ContactMe = () => {
     const formInfo = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault()
+    // const sendEmail = (e) => {
+    //     e.preventDefault()
 
-        emailjs.sendForm(`service_jpqmoxn`, `template_rbt0h7a`, formInfo.current, `UqLVJIJKBSMpzJTBn`)
-            .then((res) => {
-                formInfo.current.reset()
-                MySwal.fire(
-                    {
-                        icon: 'success',
-                        title: 'Sent!',
-                        text: `Thank you for your message, I'll be reaching out shortly!`,
-                        showConfirmButton: false,
-                        timer: 2000,
-                        color: '#fff ',
-                        background: '#2D2E32 url(/expbg.svg)',
-                        backdrop: 'rgba(0,0,0,0.8)',
-                    }
-                )
-            }, (error) => {
-                MySwal.fire(
-                    {
-                        icon: 'error',
-                        title: 'Ups!',
-                        text: `${error.text}`,
-                        showConfirmButton: false,
-                        timer: 2000,
-                        color: '#fff ',
-                        background: '#2D2E32 url(/expbg.svg)',
-                        backdrop: 'rgba(0,0,0,0.8)',
-                    }
-                )
-            });
-    }
+    //     emailjs.sendForm(`service_jpqmoxn`, `template_rbt0h7a`, formInfo.current, `UqLVJIJKBSMpzJTBn`)
+    //         .then(() => {
+    //             formInfo.current.reset()
+    //             MySwal.fire(
+    //                 {
+    //                     icon: 'success',
+    //                     title: 'Sent!',
+    //                     text: `Thank you for your message, I'll be reaching out shortly!`,
+    //                     showConfirmButton: false,
+    //                     timer: 2000,
+    //                     color: '#fff ',
+    //                     background: '#2D2E32 url(/expbg.svg)',
+    //                     backdrop: 'rgba(0,0,0,0.8)',
+    //                 }
+    //             )
+    //         }, (error) => {
+    //             MySwal.fire(
+    //                 {
+    //                     icon: 'error',
+    //                     title: 'Ups!',
+    //                     text: `${error.text}`,
+    //                     showConfirmButton: false,
+    //                     timer: 2000,
+    //                     color: '#fff ',
+    //                     background: '#2D2E32 url(/expbg.svg)',
+    //                     backdrop: 'rgba(0,0,0,0.8)',
+    //                 }
+    //             )
+    //         });
+    // }
     return (
         <Box id='contact' position='relative' gap='2rem' minHeight='100vh' bgcolor='#21252c' display='flex' flexDirection='column' justifyContent='space-between' >
 
             <Box position='absolute' className='contact-img' bottom='0px' >
-                <Player renderer='svg' autoplay loop src="https://assets6.lottiefiles.com/packages/lf20_jh9gfdye.json" />
-
+                <Player renderer='svg' autoplay loop src={Img} />
             </Box>
 
             <Box display='flex' flexDirection='column' minHeight='85vh' justifyContent='space-evenly' >
@@ -59,12 +60,12 @@ const ContactMe = () => {
 
                     <Box className='contact-info' gap='1rem' borderRadius='30px' p='3rem' maxWidth='clamp(200px, 60vw, 690px)' mx='auto' alignItems='center' justifyContent='space-evenly' display='flex' sx={{ flexDirection: { xs: 'column', sm: 'row' } }} >
                         <Box display='flex' flexDirection='column' >
-                            <Typography sx={{ textAlign: { xs: 'center', sm: 'left' } }} fontFamily='Syne' fontWeight='700' fontSize='24px' mb='0.5rem' >Let<span>'</span>s work <br /> together<span>!</span></Typography>
-                            <Typography sx={{ textAlign: { xs: 'center', sm: 'left' }, mx: { xs: 'auto', sm: '0' } }} fontSize='12px' maxWidth='200px' fontFamily='B612 Mono' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugiat laudantium corporis, placeat officiis</Typography>
+                            <Typography sx={{ textAlign: { xs: 'center', sm: 'left' } }} fontFamily='Syne' fontWeight='700' fontSize='28px' mb='0.5rem' >Let<span>'</span>s work <br /> together<span>!</span></Typography>
+                            <Typography sx={{ textAlign: { xs: 'center', sm: 'left' }, mx: { xs: 'auto', sm: '0' } }} fontSize='11px' maxWidth='200px' fontFamily='B612 Mono' >I'll love to hear any project or idea you have and collaborate into making it real and breathtaking!</Typography>
                         </Box>
 
                         <Box display='flex' >
-                            <form ref={formInfo} onSubmit={sendEmail} className='form' color='#fff' >
+                            <form ref={formInfo} onSubmit={(e) => { sendEmail(e, formInfo) }} className='form' color='#fff' >
                                 <label hidden htmlFor="name"></label>
                                 <input name='name' required={true} placeholder='Name' className='form-label' id="name" aria-describedby="my-helper-text" />
 

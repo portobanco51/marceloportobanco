@@ -31,7 +31,7 @@ function App() {
     <>
       {
         projectsMeta.length >= 4 ?
-          <Box className='fade' >
+          <Box id='top' className='fade' >
             <Header />
             <Skills />
             <Box className='exp-banner' >
