@@ -50,6 +50,4 @@ function App() {
   );
 }
 
-// OPTIMIZE CSS
-
 export default App
