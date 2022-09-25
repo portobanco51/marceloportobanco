@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material';
-// import { Animator, Fade } from 'react-scroll-motion';
 
 import SkillsList from './SkillsList';
 
