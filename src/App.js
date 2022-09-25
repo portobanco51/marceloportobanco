@@ -8,6 +8,7 @@ import Header from './components/Header'
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
+import './i18n'
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
   return (
     <>
       {
-        projectsMeta.length >= 4 ?
+        projectsMeta.length >= 0 ?
           <Box id='top' className='fade' >
             <Header />
             <Skills />

@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import { Player } from '@lottiefiles/react-lottie-player'
+import { Trans } from 'react-i18next';
 import ExperienceCard from './ExperienceCard'
 import ExperienceCardRight from './ExperienceCardRight'
 
@@ -7,7 +8,11 @@ const Experience = () => {
     return (
         <Box id='exp' className='experience'>
             <Box>
-                <Typography fontSize='30px' className='exp-shadow' textAlign='center' fontFamily='Syne' fontWeight='700' letterSpacing='6px' mx='auto' color='#D8FD38'>EXPERIENCE</Typography>
+                <Typography textTransform='uppercase' fontSize='30px' className='exp-shadow' textAlign='center' fontFamily='Syne' fontWeight='700' letterSpacing='6px' mx='auto' color='#D8FD38'>
+                    <Trans i18nKey='exp' >
+                        EXPERIENCE
+                    </Trans>
+                </Typography>
             </Box>
 
             <Box className='chart'>

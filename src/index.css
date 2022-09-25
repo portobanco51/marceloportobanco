@@ -12,7 +12,12 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+html {
+    cursor: url(assets/icons/cursor2.png), auto;
+}
+
 body {
+    cursor: url(assets/icons/cursor2.png), auto;
     color: #fff;
     background-color: var(--color-base);
     font-family: var(--font-primary);
@@ -33,7 +38,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 1.5rem;
+    padding-block-end: 2rem;
 }
 
 .loader {
@@ -48,7 +53,8 @@ body {
     transition: all 0.8s cubic-bezier(0.54, 1.73, 0.85, 0.81);
 }
 
-.pxbtn:hover {
+.pxbtn:hover,
+.pxbtn:focus {
     translate: 0.3rem;
 }
 
@@ -58,7 +64,7 @@ body {
 }
 
 a {
-    cursor: pointer;
+    cursor: url(./assets/icons/cursor2.png), pointer;
 }
 
 .span-header {
@@ -87,7 +93,6 @@ a {
 }
 
 .navbar-item {
-    cursor: pointer;
     color: var(--color-green);
     text-transform: uppercase;
     writing-mode: vertical-rl;
@@ -115,8 +120,8 @@ a {
 .contact-img {
     pointer-events: none;
     mix-blend-mode: lighten;
-    opacity: 0.5;
-    left: -100px;
+    opacity: 0.2;
+    left: 0px;
 }
 
 .experience {
@@ -323,6 +328,7 @@ span {
 
 .link-item {
     opacity: 0.6;
+    filter: drop-shadow(0px 0px 10px #000000);
     transition: all 0.4s cubic-bezier(0.54, 1.73, 0.85, 0.81);
 }
 
@@ -352,12 +358,12 @@ span {
 }
 
 .submit {
+    cursor: url(assets/icons/cursor2.png), auto;
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: 24px;
     background-color: transparent;
     color: var(--color-green);
-    cursor: pointer;
-    max-width: fit-content;
+    min-width: 100px;
     margin-inline: auto;
     border: none;
 }
