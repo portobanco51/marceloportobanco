@@ -24,14 +24,6 @@ const Navbar = () => {
                     </Trans>
                 </Typography>
             </Smooth>
-            {/* <Smooth to="exp" spy={true} smooth={true} offset={0} duration={300} hashSpy={true} >
-                <Link href='#exp' underline='none' color='#D8FD38' ><Typography className='navbar-item' letterSpacing='2px' fontFamily='Syne' fontWeight='700' fontSize='1rem' >Experience</Typography></Link>
-
-            </Smooth>
-            <Smooth to="contact" spy={true} smooth={true} offset={0} duration={300} hashSpy={true} >
-                <Link href='#contact' underline='none' color='#D8FD38' ><Typography className='navbar-item' letterSpacing='2px' fontFamily='Syne' fontWeight='700' fontSize='1rem' >Contact Me</Typography></Link>
-
-            </Smooth> */}
         </Box>
     )
 }

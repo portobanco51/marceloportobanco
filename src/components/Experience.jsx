@@ -6,7 +6,7 @@ import ExperienceCardRight from './ExperienceCardRight'
 
 const Experience = () => {
     return (
-        <Box id='exp' className='experience'>
+        <Box id='exp' mx='auto' maxWidth='90vw' minHeight='80vh' display='flex' justifyContent='space-evenly' flexDirection='column' flexWrap='nowrap' >
             <Box>
                 <Typography textTransform='uppercase' fontSize='30px' className='exp-shadow' textAlign='center' fontFamily='Syne' fontWeight='700' letterSpacing='6px' mx='auto' color='#D8FD38'>
                     <Trans i18nKey='exp' >
@@ -15,7 +15,7 @@ const Experience = () => {
                 </Typography>
             </Box>
 
-            <Box className='chart'>
+            <Box className='chart' minWidth='90vw' display='flex' flexDirection='column' gap='10vh' mx='auto' minHeight='16.8rem' justifyContent='space-between' alignItems='center' >
                 <Box position='absolute' sx={{ mt: { xs: '0.5rem', sm: '0px' } }} >
                     <Player renderer='svg' className='rocket' autoplay loop src="https://lottie.host/f37cc593-b9e7-4a1c-95de-627eae306f6c/zuJxm3L84U.json" />
                 </Box>
