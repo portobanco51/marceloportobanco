@@ -5,20 +5,21 @@ import en from './locales/en.json';
 import es from './locales/es.json';
 
 
+
 i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
         resources: {
-            eng: {
+            en: {
                 translation: en
             },
-            esp: {
+            es: {
                 translation: es
             }
         },
-        fallbackLng: 'eng',
-        lng: 'esp',
+        fallbackLng: 'en',
+        lng: '',
         debug: true,
 
         interpolation: {

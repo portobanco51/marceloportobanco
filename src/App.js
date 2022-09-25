@@ -50,7 +50,6 @@ function App() {
   );
 }
 
-// INSTALL FRAMER MOTION
 // OPTIMIZE CSS
 
 export default App

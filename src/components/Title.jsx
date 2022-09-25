@@ -7,7 +7,6 @@ const Title = () => {
             <Smooth to="top" spy={true} smooth={true} offset={0} duration={300} >
                 <Typography letterSpacing='2px' fontSize='1.5rem' fontFamily='syne' fontWeight='700' >Marcelo <span className='span-header'>Portobanco</span></Typography>
             </Smooth>
-
         </Box>
     )
 }
