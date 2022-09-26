@@ -32,7 +32,7 @@ Lightweight and high-performant library used to display the response from the PO
 
 # Extra side features
 
--   Email.js API used along it's custom hook to receive and POST input data from contact form generating an email template for the user and the owner.
+-   Email.js API used along it's custom hook to receive and POST input data from contact form generating an email template for the user and.
 -   Custom react hook to fetch meta tags data at projects section **( projectsFetchData.js )**
 -   Automatic language condition from i18next dependency
 -   Hidden **sourcemap** production command for minimized react structure on deploy to improve security and machine performance
