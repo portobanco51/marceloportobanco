@@ -26,8 +26,13 @@ The internationalization and location of the application for the language settin
 
 An API to fetch the meta tags content from a website, therefore, the seo and social media display is show properly to the user. Components from Projects.jsx where generated and fetch by this API.
 
+## SweetAlerts2
+
+Lightweight and high-performant library used to display the response from the POST request response at email form service in a responsive and interactive way.
+
 # Extra side features
 
+-   Email.js API used along it's custom hook to receive and POST input data from contact form generating an email template for the user and the owner.
 -   Custom react hook to fetch meta tags data at projects section **( projectsFetchData.js )**
 -   Automatic language condition from i18next dependency
 -   Hidden **sourcemap** production command for minimized react structure on deploy to improve security and machine performance
