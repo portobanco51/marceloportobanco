@@ -22,7 +22,7 @@ const Banner = () => {
 
                     <Typography sx={{ textAlign: { xs: 'center', sm: 'justify' }, mx: { xs: 'auto', sm: '0' } }} my='0.5rem' lineHeight='1.1rem' maxWidth='350px' fontSize='12px' fontWeight='400' fontFamily='B612 Mono' >
                         <Trans i18nKey='description' >
-
+                            I'm a JavaScript developer passionate about taking projects to the next level with the latest technologies and scalable code to improve your web browsing experience!
                         </Trans>
                     </Typography>
 

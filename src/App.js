@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchData, options } from './utils/projectsData';
+import { fetchData, options } from './utils/projectsFetchData';
 import { projects } from './utils/projectsUrls';
 import { Box } from '@mui/material'
 import LoadingScreen from './components/LoadingScreen';
@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       {
-        projectsMeta.length >= 0 ?
+        projectsMeta.length >= 6 ?
           <Box id='top' className='fade' >
             <Header />
             <Skills />

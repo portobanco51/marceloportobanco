@@ -44,7 +44,8 @@ span {
 }
 
 .header {
-    background-image: url(./assets/images/bgport2.png);
+    background-image: url(./assets/images/bg.svg);
+    background-color: var(--color-base);
     background-color: var(--color-base);
     background-position: center;
     background-repeat: no-repeat;
@@ -240,6 +241,11 @@ span {
 
 .loading {
     cursor: wait;
+}
+
+.meta-img {
+    display: hidden;
+    width: 0px;
 }
 
 .skill-shadow::after {

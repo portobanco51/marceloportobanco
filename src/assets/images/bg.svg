@@ -1,0 +1,34 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_bf_0_1)">
+<ellipse cx="1252.5" cy="512" rx="393.5" ry="608" fill="#D8FD38" fill-opacity="0.03"/>
+</g>
+<g filter="url(#filter1_bf_0_1)">
+<ellipse cx="1815.5" cy="537.5" rx="390.5" ry="404.5" fill="#242739" fill-opacity="0.5"/>
+</g>
+<g filter="url(#filter2_bf_0_1)">
+<ellipse cx="-39.5" cy="587.5" rx="390.5" ry="404.5" fill="#45383F" fill-opacity="0.2"/>
+</g>
+<defs>
+<filter id="filter0_bf_0_1" x="659" y="-296" width="1187" height="1616" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="100"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_1" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect2_foregroundBlur_0_1"/>
+</filter>
+<filter id="filter1_bf_0_1" x="1225" y="-67" width="1181" height="1209" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="37.5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_1" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect2_foregroundBlur_0_1"/>
+</filter>
+<filter id="filter2_bf_0_1" x="-630" y="-17" width="1181" height="1209" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="37.5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_1" result="shape"/>
+<feGaussianBlur stdDeviation="100" result="effect2_foregroundBlur_0_1"/>
+</filter>
+</defs>
+</svg>

@@ -2,8 +2,9 @@ import { useRef } from 'react';
 import { Box, Typography } from '@mui/material'
 import { Player } from '@lottiefiles/react-lottie-player'
 import { Trans } from 'react-i18next';
-import Footer from './Footer';
 import { sendEmail } from '../utils/email'
+import Footer from './Footer';
+import metaImg from '../assets/images/metaImg.png'
 
 const ContactMe = () => {
     const formInfo = useRef();
@@ -56,6 +57,7 @@ const ContactMe = () => {
                 </Box>
             </Box>
             <Footer />
+            <img src={metaImg} alt='metaimg' className='meta-img' />
         </Box >
     )
 }
