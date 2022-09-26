@@ -20,7 +20,7 @@ This npm package made easy the task for the smooth-scroll behavior between indep
 
 ## react-i18next
 
-The internationalization and location of the application for the language setting show to the user has beeen provided by the i18next-browser-location integration with react.js.
+The internationalization and location of the application for the language setting show to the user has been provided by the i18next-browser-location integration with react.js.
 
 ## OG Link Preview | RapidAPI
 
