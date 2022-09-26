@@ -10,18 +10,20 @@ const ContactMe = () => {
     const formInfo = useRef();
 
     return (
-        <Box id='contact' position='relative' gap='2rem' minHeight='100vh' bgcolor='#21252c' display='flex' flexDirection='column' justifyContent='space-between' >
+        <Box id='contact' position='relative' bgcolor='#21252c' display='flex' flexDirection='column' justifyContent='space-between' >
 
             <Box position='absolute' className='contact-img' bottom='0px' >
                 <Player renderer='svg' autoplay loop src='https://lottie.host/007193f6-0438-47d8-ba99-69aa6b158027/lxVl35PvVW.json' />
             </Box>
 
-            <Box display='flex' flexDirection='column' minHeight='85vh' justifyContent='space-evenly' >
+            <Box style={{ paddingBlockStart: '2rem' }} display='flex' flexDirection='column' minHeight='100vh' justifyContent='space-between'>
+
                 <Typography textTransform='uppercase' fontSize='30px' className='contact-shadow' textAlign='center' fontFamily='Syne' fontWeight='700' letterSpacing='6px' mx='auto' color='#D8FD38' >
                     <Trans i18nKey='contact' >
                         CONTACT ME
                     </Trans>
                 </Typography>
+
                 <Box>
 
                     <Box className='contact-info' boxShadow='0 0px 25px #00000070' flexGrow='1' bgcolor='rgba(121, 122, 128, 0.25)' gap='1rem' borderRadius='30px' p='3rem' maxWidth='clamp(200px, 60vw, 690px)' mx='auto' alignItems='center' justifyContent='space-evenly' display='flex' sx={{ flexDirection: { xs: 'column', sm: 'row' } }} >
@@ -53,11 +55,12 @@ const ContactMe = () => {
                                 </input>
                             </form>
                         </Box>
+
                     </Box>
                 </Box>
+                <Footer />
             </Box>
             <img src={metaImg} alt='metaimg' className='meta-img' />
-            <Footer />
         </Box >
     )
 }
