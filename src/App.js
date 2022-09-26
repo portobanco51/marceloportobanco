@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       {
-        projectsMeta.length >= 6 ?
+        projectsMeta.length >= 4 ?
           <Box id='top' className='fade' >
             <Header />
             <Skills />

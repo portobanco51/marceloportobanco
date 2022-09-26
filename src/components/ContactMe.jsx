@@ -56,8 +56,8 @@ const ContactMe = () => {
                     </Box>
                 </Box>
             </Box>
-            <Footer />
             <img src={metaImg} alt='metaimg' className='meta-img' />
+            <Footer />
         </Box >
     )
 }
