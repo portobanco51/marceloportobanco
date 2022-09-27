@@ -26,8 +26,8 @@ const ContactMe = () => {
 
                 <Box>
 
-                    <Box className='contact-info' boxShadow='0 0px 25px #00000070' flexGrow='1' bgcolor='rgba(121, 122, 128, 0.25)' mb='1rem' borderRadius='30px' p='3rem' maxWidth='clamp(200px, 60vw, 690px)' mx='auto' alignItems='center' justifyContent='space-evenly' display='flex' sx={{ flexDirection: { xs: 'column', sm: 'row' } }} >
-                        <Box display='flex' flexDirection='column' >
+                    <Box className='contact-info' boxShadow='0 0px 25px #00000070' flexGrow='1' bgcolor='rgba(121, 122, 128, 0.25)' borderRadius='30px' p='3rem' maxWidth='clamp(200px, 60vw, 690px)' mx='auto' alignItems='center' justifyContent='space-evenly' display='flex' sx={{ flexDirection: { xs: 'column', sm: 'row' } }} >
+                        <Box display='flex' justifyContent='flex-start' minHeight='12.5rem' flexDirection='column' >
                             <Typography sx={{ textAlign: { xs: 'center', sm: 'left' } }} fontFamily='Syne' fontWeight='700' fontSize='28px' mb='0.5rem' >
                                 <Trans i18nKey='ct-header'>
                                     Let<span className='span-green' >'</span>s work <br /> together<span className='span-green' >!</span>
@@ -40,7 +40,7 @@ const ContactMe = () => {
                             </Typography>
                         </Box>
 
-                        <Box display='flex' >
+                        <Box display='flex' minHeight='12.5rem'>
                             <form ref={formInfo} onSubmit={(e) => { sendEmail(e, formInfo) }} className='form' color='#fff' >
                                 <label hidden htmlFor="name"></label>
                                 <input name='name' required={true} placeholder='Name' className='form-label' id="name" aria-describedby="my-helper-text" />
