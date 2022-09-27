@@ -4,7 +4,7 @@ import SkillCard from './SkillCard'
 
 const SkillSlider = () => {
     return (
-        <Box display='flex' gap='5.5rem' maxWidth='100%' ml='5.5rem' >
+        <Box display='flex' maxWidth='100%' >
             {skills.map((el, i) => (
                 <SkillCard key={i} name={el.name} logo={el.logo} />
             ))}

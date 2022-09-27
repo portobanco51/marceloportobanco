@@ -14,7 +14,7 @@ const Projects = ({ projectsData }) => {
                     </Trans>
                 </Typography>
                 {projectsData.length === 0 ? <Player renderer='svg' className='loader' autoplay loop src="https://lottie.host/09bf873e-d574-4f98-aa2b-6cc97dd0bb35/cI0dW5FOxm.json" /> :
-                    <Box display='flex' flexWrap='wrap' justifyContent='center' sx={{ gap: { xs: '1.5rem', sm: '3rem', md: '4rem' } }} >
+                    <Box display='flex' flexWrap='wrap' justifyContent='center'  >
                         {
                             projectsData.map((e, i) => (
                                 <ProjectCard key={i} data={e} />

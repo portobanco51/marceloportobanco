@@ -26,7 +26,7 @@ const ContactMe = () => {
 
                 <Box>
 
-                    <Box className='contact-info' boxShadow='0 0px 25px #00000070' flexGrow='1' bgcolor='rgba(121, 122, 128, 0.25)' gap='1rem' borderRadius='30px' p='3rem' maxWidth='clamp(200px, 60vw, 690px)' mx='auto' alignItems='center' justifyContent='space-evenly' display='flex' sx={{ flexDirection: { xs: 'column', sm: 'row' } }} >
+                    <Box className='contact-info' boxShadow='0 0px 25px #00000070' flexGrow='1' bgcolor='rgba(121, 122, 128, 0.25)' mb='1rem' borderRadius='30px' p='3rem' maxWidth='clamp(200px, 60vw, 690px)' mx='auto' alignItems='center' justifyContent='space-evenly' display='flex' sx={{ flexDirection: { xs: 'column', sm: 'row' } }} >
                         <Box display='flex' flexDirection='column' >
                             <Typography sx={{ textAlign: { xs: 'center', sm: 'left' } }} fontFamily='Syne' fontWeight='700' fontSize='28px' mb='0.5rem' >
                                 <Trans i18nKey='ct-header'>

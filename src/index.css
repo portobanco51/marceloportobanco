@@ -120,7 +120,7 @@ span {
     max-width: 7rem;
     min-width: 7rem;
     min-height: 7rem;
-    margin-inline: auto;
+    margin: 0 auto;
     filter: drop-shadow(0px 0px 10px #00000090);
 }
 
