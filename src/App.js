@@ -35,10 +35,8 @@ function App() {
           <Box id='top' className='fade' >
             <Header />
             <Skills />
-            <Box className='exp-banner' >
-              <Projects projectsData={projectsMeta} />
-              <Experience />
-            </Box>
+            <Projects projectsData={projectsMeta} />
+            <Experience />
             <ContactMe />
           </Box>
           :
