@@ -168,7 +168,8 @@ span {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
+    max-width: -webkit-fill-available;
 }
 
 .loader {
