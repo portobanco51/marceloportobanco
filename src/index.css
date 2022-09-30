@@ -191,7 +191,6 @@ span {
     max-width: clamp(150px, 50vw, 280px);
     position: relative;
     rotate: 65deg;
-    z-index: -99;
     mix-blend-mode: hard-light;
     opacity: 0.2;
 }
