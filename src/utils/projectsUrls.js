@@ -3,7 +3,7 @@ export const projects = [
     'https://dev-toolbox.netlify.app',
     'https://get-giphy.netlify.app',
     'https://posters-mockcart.netlify.app',
-    'https://marceloportobanco.netlify.app',
-    'https://task-director.netlify.app'
+    'https://task-director.netlify.app',
+    'https://marceloportobanco.dev'
 ]
 
