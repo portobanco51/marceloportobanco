@@ -312,3 +312,20 @@ span {
         transform: translateX(-50%);
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .skill-shadow::after {
+        content: unset;
+    }
+
+    .projects-shadow::after {
+        content: unset;
+    }
+    .contact-shadow::after {
+        content: unset;
+    }
+
+    .exp-shadow::after {
+        content: unset;
+    }
+}
