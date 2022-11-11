@@ -25,7 +25,7 @@ const Experience = () => {
 
                 <Box display='flex' flexDirection='row' justifyContent='center' sx={{ gap: { xs: '0px', sm: '1vw', md: '18vw' } }} >
                     <ExperienceCard title={'AMAZON, INC'} time={2019} position={'Transportation Analyst'} />
-                    <ExperienceCardRight title={'Aztec Promotional'} time={'Now'} position={'Web Developer'} />
+                    <ExperienceCardRight title={'AZTEC'} time={'Now'} position={'Web Developer'} />
                 </Box>
 
             </Box>
