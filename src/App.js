@@ -15,18 +15,35 @@ function App() {
   const [projectsMeta, setProjectsMeta] = useState([])
 
   useEffect(() => {
-    const projectsData = () => {
+    const projectsData = async () => {
       setProjectsMeta([]);
-      const openGraphUrl = 'https://og-link-preview.p.rapidapi.com/?url=';
+      const openGraphUrl = 'https://url-metadata-opengraph.p.rapidapi.com/parse?url=';
       const githubUrl = 'https://github.com/portobanco51/';
-      projects.forEach(async (e) => {
-        const data = await fetchData(`${openGraphUrl}${e}`, options);
-        const repoUrl = data.title.toLowerCase();
-        setProjectsMeta((prev) => [...prev, { title: data.title, url: data.domain, img: [data.cover || data.favicon], description: data.description, git: `${githubUrl}${repoUrl.replace(/\s+/g, '')}` }])
-      })
-    }
-    projectsData()
-  }, [])
+
+      const asyncFetchData = async (projectUrl) => {
+        const { og } = await fetchData(`${openGraphUrl}${projectUrl}`, options);
+        const { title: { content: titleContent }, description: { content: descriptionContent }, image: { content: imageContent }, } = og;
+
+        const repoUrl = titleContent.toLowerCase();
+        const titleText = titleContent.replace(/GitHub - [^/]+\/([^:]+): .+$/, "$1");
+        const ArrowKeysMenuImg = "https://shorturl.at/T0l0b";
+
+        return {
+          title: titleText,
+          url: projectUrl || null,
+          img: imageContent || ArrowKeysMenuImg,
+          description: descriptionContent,
+          git: `${githubUrl}${repoUrl.replace(/\s+/g, "")}`
+        };
+      };
+
+      for (const projectUrl of projects) {
+        const projectsMeta = await asyncFetchData(projectUrl);
+        setProjectsMeta((prev) => [...prev, projectsMeta]);
+      };
+    };
+    projectsData();
+  }, []);
 
   return (
     <>
