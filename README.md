@@ -1,3 +1,5 @@
+# [Depricated]
+
 # Welcome to My Portfolio!
 
 Hi! I'm **Marcelo Portobanco**. This SPA, react.js based project, main objective is to showcase the experience and overall skills in a responsive, interactive design for the users.
@@ -36,3 +38,7 @@ Lightweight and high-performant library used to display the response from the PO
 -   Custom react hook to fetch meta tags data at projects section **( projectsFetchData.js )**
 -   Automatic language condition from i18next dependency
 -   Hidden **sourcemap** production command for minimized react structure on deploy to improve security and machine performance
+
+# Preview
+
+![Previews](https://github.com/user-attachments/assets/a25b94e4-21b3-4f81-8af9-3876cd17026f)

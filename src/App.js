@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       {
-        projectsMeta.length >= 4 ?
+        projectsMeta.length >= 0 ?
           <Box id='top' className='fade' >
             <Header />
             <Skills />
